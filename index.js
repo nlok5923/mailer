@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname + '/../public')));
 app.use(express.static('public'));
 
 app.get('/' ,(req,res) => {
-    res.render('thankyou',{});
+    res.render('subscribe',{});
 });
 
 app.post('/' , async (req,res) => {
