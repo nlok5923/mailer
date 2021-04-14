@@ -47,6 +47,7 @@ html {
       border-bottom: 2px solid black;
       height: 30px;
       width: 250px;
+      font-size: 20px;
       font-family: monospace;
   }
   .btn {
