@@ -4,6 +4,7 @@ const Email = require('./models/email');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');
+const port = process.env.port || 3000;
 
 mongoose
   .connect('mongodb+srv://creator:nnNN@@22@cluster0.bkrcv.mongodb.net/Images', {
@@ -42,6 +43,6 @@ app.post('/' , async (req,res) => {
     });
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
  console.log("listneing");   
 })
