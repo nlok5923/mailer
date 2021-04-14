@@ -7,7 +7,7 @@ const path = require('path');
 const port = process.env.PORT || 3000;
 
 mongoose
-  .connect('mongodb+srv://creator:nnNN@@22@cluster0.bkrcv.mongodb.net/Images', {
+  .connect('mongodb+srv://creator:nnNN@@22@cluster0.bkrcv.mongodb.net/emails', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
