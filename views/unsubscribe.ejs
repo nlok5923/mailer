@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="css/style.css">
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content">
+    <h1> Sorry to see you go &#128546; </h1>
+        <h1>Email here
+        </h1>
+        <input type="email" name="email" class="mail" id="mail" required> <br>
+        <button type="submit" class="btn" onclick="unsubscribe()">unsubscribe</button>
+</div>
+
+<script>
+
+    const unsubscribe = async () => {
+        var xhr = new XMLHttpRequest();
+        const url = '/unsubscribe/' + document.getElementById('mail').value;
+    xhr.open('POST',url , true);
+    await xhr.setRequestHeader('Content-Type', 'application/json');
+    var resp = await xhr.send(
+        JSON.stringify({
+            value: "data",
+        })
+        );
+    }
+</script>

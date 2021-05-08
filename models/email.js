@@ -3,8 +3,9 @@ const mongoose = require("mongoose")
 let subscribers = new mongoose.Schema({
     email: {
         type:String, 
-        default:null
+        default:null,
+        unique: true,
     }
 })
 
-module.exports = mongoose.model('subscriber', subscribers);
+module.exports = mongoose.model('astronomy-subscriber', subscribers);
